@@ -10,7 +10,6 @@
     "gulp": "^3.9.1"
   },
   "scripts": {
-    "gulp": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "chou",
