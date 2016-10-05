@@ -1,0 +1,116 @@
+{
+    "db": {
+        "USER": [
+            {
+                "usrId": 1,
+                "usrName": "firstUser",
+                "usrPwd": "123",
+                "usrCreateTime": "16/03/24/00:33:20",
+                "usrMobi": "09123456"
+            },
+            {
+                "usrId": 2,
+                "usrName": "secondUser",
+                "usrPwd": "",
+                "usrCreateTime": "16/03/24/00:33:22",
+                "usrMobi": "09123456"
+            },
+            {
+                "usrId": 3,
+                "usrName": "thirdUser",
+                "usrPwd": "",
+                "usrCreateTime": "16/03/25/00:33:22",
+                "usrMobi": "094573321"
+            },
+            {
+                "usrId": 4,
+                "usrName": "Jack",
+                "usrPwd": "qqq",
+                "usrCreateTime": "2016-05-21T13:26:26.051Z",
+                "usrMobi": "02-1231212"
+            },
+            {
+                "usrId": 5,
+                "usrName": "Jack",
+                "usrPwd": "qqq",
+                "usrCreateTime": "Fri Jun 17 2016 18:06:16 GMT+0800 (CST)",
+                "usrMobi": "02-1231212"
+            }
+        ],
+        "ORDER": [
+
+        ],
+        "MERCHANT": [
+            {
+                "metId": 1,
+                "metName": "韩国纸上烤肉",
+                "metPhone": "867",
+                "menu": [
+                    {
+                        "dihId": 1,
+                        "dihName": "炸鸡腿",
+                        "metId": 1,
+                        "dihType": "主食",
+                        "dihPrice": "10"
+                    },
+                    {
+                        "dihId": 2,
+                        "dihName": "红茶",
+                        "metId": 1,
+                        "dihType": "飲料",
+                        "dihPrice": "5"
+                    }
+                ],
+                "metMinPrice": 200
+            },
+            {
+                "metId": 2,
+                "metName": "麥當勞",
+                "metPhone": "234234234",
+                "menu": [
+                    {
+                        "dihId": 3,
+                        "dihName": "小XX",
+                        "metId": 2,
+                        "dihType": "飲料",
+                        "dihPrice": "4"
+                    }
+                ],
+                "metMinPrice": 180
+            }
+        ],
+        "DISH": [
+            {
+                "dihId": 1,
+                "dihName": "炸鸡腿",
+                "metId": 1,
+                "dihType": "主食",
+                "dihPrice": "10"
+            },
+            {
+                "dihId": 2,
+                "dihName": "红茶",
+                "metId": 1,
+                "dihType": "飲料",
+                "dihPrice": "5"
+            },
+            {
+                "dihId": 3,
+                "dihName": "小XX",
+                "metId": 2,
+                "dihType": "飲料",
+                "dihPrice": "4"
+            }
+        ],
+        "GROUP": [
+
+        ],
+        "GROUP_MEMBER": [
+
+        ],
+        "GROUP_ORDER": [],
+        "GROUP_DISHES": [
+
+        ]
+    }
+}
