@@ -1,0 +1,56 @@
+(1)
+git init 、 npm init 、資料夾 、.gitignore、...
+ 
+git add . 的問題:
+
+How to solve "filename too long" error in git (Powershell and GitHub Application) for windows:
+
+
+http://ourcodeworld.com/articles/read/109/how-to-solve-filename-too-long-error-in-git-powershell-and-github-application-for-windows
+
+git config --system core.longpaths true <------------------
+
+
+fatal: Unable to create '/path/my_proj/.git/index.lock': File exists.
+
+If no other git process is currently running, this probably means a
+git process crashed in this repository earlier. Make sure no other git
+process is running and remove the file manually to continue.
+
+
+rm -f ./.git/index.lock<-----------------------------
+
+
+The file will have its original line endings in your working directory. warning: LF will be replaced by CRLF in Gemfile.
+
+The file will have its original line endings in your working directory. warning: LF will be replaced by CRLF in Gemfile.lock.
+
+The file will have its original line endings in your working directory. warning: LF will be replaced by CRLF in README.
+
+
+In Unix systems the end of a line is represented with a line feed (LF). In windows a line is represented with a carriage return (CR) and a line feed (LF) thus (CRLF). when you get code from git that was uploaded from a unix system they will only have a LF. It's nothing to worry about.
+
+And if you want to turn this warning off, type this in the git command line
+
+
+git config --global core.autocrlf  false<-----------------------------
+
+
+(2)
+增加gitignore
+http://oomusou.io/phpstorm/phpstorm-git-rm-idea/
+//不add node_modules
+//git rm -r --cached node_modules
+//git commit -m "removing node_modules"
+
+(3)
+gitBook、sourceTree
+https://zhuanghongkuan1.gitbooks.io/demo0115/content/chapter4/443.html
+
+(4)
+git push 的問題
+
+fatal: remote origin already exists.
+
+git remote rm origin <-----------------------------
+git remote add origin https://github.com/XXXXX <-----------------------------

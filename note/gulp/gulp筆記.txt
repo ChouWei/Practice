@@ -1,0 +1,5 @@
+npm root 查看 npm 當前路徑
+npm root -g 查看npm 全域路徑
+
+
+環境變數還是絕對路徑靠普....ex: C:\Users\david.chou\AppData\Roaming\npm

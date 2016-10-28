@@ -1,0 +1,189 @@
+
+
+var qqq=[
+  {
+    "title": "ゅ彻1",
+    "id": 1,
+  },
+  {
+    "title": "ゅ彻2",
+    "id": 2
+  },
+  {
+    "title": "ゅ彻3",
+    "id": 3
+  }
+];
+
+var www={
+	"id" :1,
+  "authorId": 5,
+  "content": "content",
+  "timestamp": "2015-08-26"
+};
+
+var eee={
+  "email": "aszx87410@gmail.com",
+  "name": "huli",
+    "id": 5
+};
+
+
+single callback:
+
+
+aaa(1,2,function(qq,qqqq){
+
+console.log("test1234"+qq+qqqq);
+
+
+});
+
+function aaa( a, b,callback){
+
+console.log("test789"+a+b);
+
+if(callback){
+
+callback(JSON.stringify(qqq),"hello man~",'qqqqqqqqqqqqqqqqqqqq');
+
+}
+}
+
+
+
+
+callback hell:
+
+
+getArticleList(function(bid){
+  getArticle(bid,function(aid){
+  		getAuthor(aid,function(email){
+      	console.log(email);
+      })
+  })
+});
+
+function getArticleList(callback){
+	if(callback){
+  
+  	callback(JSON.stringify(qqq[0].id));
+  }
+}
+
+function getArticle(id,callback){
+if(callback && id == JSON.stringify(www.id)){
+callback(JSON.stringify(www.authorId));
+}
+
+
+}
+
+function getAuthor(id,callback){
+
+		if(callback && id== JSON.stringify(eee.id)){
+    callback(JSON.stringify(eee.email));
+    }
+}
+
+
+疭翴:backㄓ把计礚狠backㄓ把计璶Μ碭
+
+
+
+single callback To Promise:
+
+
+aaa(1,2).then(function(qq){
+console.log("test1234"+qq);
+});
+
+function aaa(a, b){
+return new Promise(function(resolve,reject){
+console.log("test789"+a+b);
+resolve(JSON.stringify(qqq));
+});
+}
+
+Promise resolve""把计ぃcallbackΩ肚帮Τ⊿Τ把计
+
+callback hell To Promise:
+
+
+getArticleList().then(function(bid){
+  return getArticle(bid);
+}).then(function(aid){
+return getAuthor(aid);
+}).then(function(email){
+	console.log(email);
+});
+
+
+
+
+function getArticleList(){
+return new Promise(function(resolve,reject){
+resolve(JSON.stringify(qqq[0].id));
+});
+}
+
+function getArticle(id){
+if(id == JSON.stringify(www.id)){
+return new Promise(function(resolve,reject){
+resolve(JSON.stringify(www.authorId));
+});
+
+}
+
+
+}
+
+function getAuthor(id){
+
+		if( id== JSON.stringify(eee.id)){
+    return new Promise(function(resolve,reject){
+    resolve(JSON.stringify(eee.email));
+    });
+    
+    }
+}
+
+Promise resolve""把计ぃcallbackΩ肚帮Τ⊿Τ把计
+
+
+
+
+callback hell To Promise To Promise+arrow function:
+
+getArticleList()
+.then(bid => getArticle(bid))
+.then(aid => getAuthor(aid))
+.then(email=>{
+	console.log(email);
+});
+
+
+function getArticleList(){
+return new Promise(function(resolve,reject){
+resolve(JSON.stringify(qqq[0].id));
+});
+}
+
+
+function getArticle(id){
+if(id == JSON.stringify(www.id)){
+return new Promise(function(resolve,reject){
+resolve(JSON.stringify(www.authorId));
+});
+}
+}
+
+
+function getAuthor(id){
+		if( id== JSON.stringify(eee.id)){
+    return new Promise(function(resolve,reject){
+    resolve(JSON.stringify(eee.email));
+    });    
+    }
+}
+
