@@ -1,0 +1,74 @@
+https://vuefe.cn/guide/index.html ¤¤¤å
+
+html
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+<div id="app">
+  <p>{{ message }}</p>
+</div>
+
+<div id="app-2"><span v-bind:title="message">
+  Hover your mouse over me for a few seconds to see my dynamically bound title!
+</span></div>
+
+<div id="app-3"><p v-if="seen">Now you seen {{message}}</p></div>
+
+<div id="app-4"><ol><li v-for="todo in todos">{{todo.text}}</li></ol></div>
+
+<div id="app-5"><p>{{testHahaha}}</p>
+
+    <button v-on:click="reverseMessage">Reverse Message</button>
+</div>
+
+js
+
+new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue.js!'
+  }
+});
+
+var app2 = new Vue({
+	el: '#app-2',
+  data:{
+  	message: 'You loaded this page on' +new Date()
+  }
+
+});
+
+app2.message='some new message';
+
+var app3 = new Vue({
+		el:'#app-3',
+    data:{
+    	seen :true,
+      message:"wowww!!!"
+    }
+
+});
+var app4 = new Vue({
+el:'#app-4',
+data:{
+		todos:[{text:'what'},{text:'where'},{text:'when'}]
+}
+});
+app4.todos.push({text :'how'});
+
+var app5 = new Vue({
+	el:'#app-5',
+  data:{
+  	testHahaha:'Hello vue.js!!',
+  },
+  methods:{
+  reverseMessage:function(){
+  	this.testHahaha = this.testHahaha.split('').reverse().join('')
+  }
+  }
+
+})
+
+
+
+

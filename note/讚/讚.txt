@@ -1,0 +1,11 @@
+http://www.w3cplus.com/css/notes-css-dev-conf-2016.html
+
+http://slides.com/davidkhourshid/reactanim#/3
+
+http://keithjgrant.com/talks/stop-thinking-in-pixels/#/
+
+http://www.ppt20.com/
+
+https://blog.gtwang.org/web-development/using-css3-animation/
+
+http://flexboxfroggy.com/
