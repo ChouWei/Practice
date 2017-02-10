@@ -1,0 +1,7 @@
+http://www.jianshu.com/p/6969b8822630
+
+
+npm install babel-core
+npm install babel-loader
+npm install babel-polyfill
+npm install -D -E babel-preset-es2015@6.9.0

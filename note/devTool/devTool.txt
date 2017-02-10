@@ -1,0 +1,47 @@
+http://www.html-js.com/article/Chrome-devtools-debug-chrome-devtools-debug-Elements
+
+
+https://leeon.gitbooks.io/devtools/content/learn_basic/using_console.html
+標註 Timeline
+
+google實驗室
+chrome://flags/
+
+chrome.com/beta
+
+console.clear();or ctrl+L
+
+console.assert(false,"")  false:執行""   true:不執行""
+
+console.group("title");
+console.groupEnd();
+
+console.time("Array initialize");
+console.timeEnd("Array initialize");
+
+ps:console.以下，可以接受多個參數
+
+console.log() 
+
+console.error() ps:紅色
+
+console.table();
+
+console.warn()  ps:黃色
+
+console.info()  ps:藍色
+
+debugger 中斷點
+
+‧	%s - 字串格式
+‧	%i 或 %d - 整型格式
+‧	%f - 浮點格式
+‧	%o - DOM節點
+‧	%O - JavaScript 對象
+‧	%c - 對輸出的字串使用css樣式，樣式由第二個參數指定。
+
+
+profile("A")
+profile("B")
+profileEnd("B")
+profileEnd("A")

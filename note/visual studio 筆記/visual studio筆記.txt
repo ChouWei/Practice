@@ -1,0 +1,63 @@
+工具->選項->NuGet管理員 底下 套件來源
+
+案+(新增) 名稱:SouthChina20 來源:\\evmserver03\EDeploymentArea\nuget20 更新 確定
+
+在D槽 新增MyProject 
+
+ps:新增專案時 4.6.1版
+
+新增專案FinanceProject 
+
+加入 類別庫 FinanceEntity 、 FinanceModel 、FinanceService
+
+
+Webform4.0以前
+
+MVC .net3.5
+
+Web.ApI MVC延伸 
+
+singlePage .. 畫面只有一個  控制javascript 透過ajax連結  ex:開發盤點 
+
+
+刪掉預設 AppData Model scripts 和資料庫裡的class1
+
+FinanceEntity ->BeginEntityProject
+
+FinanceModel ->BeginModelProject
+
+FinanceService ->BeginServiceProject
+
+FinanceWeb ->BeginWebFormProject
+
+FinanceWeb 右鍵設為起始專案
+start.aspx右鍵設為起始頁
+
+Login.aspx MenuStyle.Master
+底下的
+login.aspx <html xmlns="http://www.w3.org/1999/xhtml">  改為  <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-tw">
+
+刪除 web.config 底下的
+<system.codedom>
+    <compilers>
+      <compiler language="c#;cs;csharp" extension=".cs"
+        type="Microsoft.CodeDom.Providers.DotNetCompilerPlatform.CSharpCodeProvider, Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+        warningLevel="4" compilerOptions="/langversion:6 /nowarn:1659;1699;1701"/>
+      <compiler language="vb;vbs;visualbasic;vbscript" extension=".vb"
+        type="Microsoft.CodeDom.Providers.DotNetCompilerPlatform.VBCodeProvider, Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+        warningLevel="4" compilerOptions="/langversion:14 /nowarn:41008 /define:_MYTYPE=\&quot;Web\&quot; /optionInfer+"/>
+    </compilers>
+  </system.codedom>
+
+
+Entity 	為處理單元 儲存到記憶體的最小單元 就是屬性..
+Model  	可以裝一堆Entity 
+Service 為處理邏輯的地方，唯一接受的參數是Model，傳出也是Model
+Web 	展現和收集資料
+
+一律顯示
+
+基本的檢核在Entity裏頭做
+真正商業邏輯在Service做
+
+

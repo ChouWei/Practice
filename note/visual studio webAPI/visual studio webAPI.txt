@@ -1,0 +1,11 @@
+¤Jªù
+https://www.asp.net/web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api
+
+¾E²¾
+https://docs.microsoft.com/en-us/aspnet/core/migration/webapi
+
+jquery mobile
+https://ezoapp.gitbooks.io/ezoapp-tutorials/content/chapter4/index.html
+
+jquery.mobile practice
+https://taco.visualstudio.com/en-us/docs/get-started-first-mobile-app/

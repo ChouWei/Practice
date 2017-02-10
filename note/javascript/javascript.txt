@@ -1,0 +1,53 @@
+end() 方法結束當前鏈條中的最近的篩選操作，並將匹配元素集還原為之前的狀態。
+
+ex:<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="/jquery/jquery.js"></script>
+</head>
+
+<body>
+  <ul class="first">
+     <li class="foo">list item 1</li>
+     <li>list item 2</li>
+     <li class="bar">list item 3</li>
+  </ul>
+  <ul class="second">
+     <li class="foo">list item 1</li>
+     <li>list item 2</li>
+     <li class="bar">list item 3</li>
+  </ul>
+  <script>$('ul.first').find('.foo')
+    .css('background-color', 'red')
+  .end().find('.bar')
+    .css('background-color', 'green')
+  .end();</script>
+</body>
+</html>
+
+eq(index) 方法將匹配元素集縮減值指定 index 上的一個。
+
+ex:
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  div { width:60px; height:60px; margin:10px; float:left;
+        border:2px solid blue; }
+  .blue { background:blue; }
+  </style>
+  <script type="text/javascript" src="/jquery/jquery.js"></script>
+</head>
+
+<body>
+  <div></div>
+  <div></div>
+  <div></div>
+
+  <div></div>
+  <div></div>
+  <div></div>
+
+  <script>$("body").find("div").eq(2).addClass("blue");</script>
+</body>
+</html>

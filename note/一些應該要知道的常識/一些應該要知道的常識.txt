@@ -1,0 +1,25 @@
+http://coolshell.cn/articles/9666.html
+
+https://liujb.wordpress.com/2016/01/20/how-to-quick-getting-started-for-frontend/
+
+http://coderlmn.github.io/code-standards/#_pillars_of_front_end_development
+
+"程序員修煉之道︰從小工到專家 ":https://mitpress.mit.edu/sicp/full-text/book/book-Z-H-9.html
+
+CSS:https://blog.mozilla.org/webdev/2009/03/27/css-spriting-tips/
+
+webkit:
+
+WebKit是一種用來讓網頁瀏覽器繪製網頁的排版引擎。它被用於Apple Safari。其分支被用於基於Chromuim的網頁瀏覽器，如：Opera與Google Chrome。
+Webkit亦使用於Apple iOS、BlackBerry Tablet OS、Tizen及Amazon Kindle的預設瀏覽器。WebKit的C++應用程式介面提供了一系列的Class以在視窗上顯示網頁內容，並且實現了一些瀏覽器的特色，如使用者連結點擊、管理前後頁面列表及近期歷史頁面等等。
+---------------------------------------------------------------------------------------------------------------------------
+DOM tree and CSS rule tree 來構造 Rendering Tree
+---------------------------------------------------------------------------------------------------------------------------
+什麼是SVG?
+可縮放向量圖形（Scalable Vector Graphics，簡稱SVG）是W3C所制定的開放性網路標準之一。它是以可擴充套件標記語言（XML），來描述2D圖形的一種圖形格式，也可以作動態效果、提供互動功能。SVG的獨特性在於它可以搭配使用CSS（Cascading Style Sheets）、Script腳本和DOM（Document Object Model）。例如，想要制定SVG的圖像色彩及其他視覺的表現，可以搭配使用CSS來作設計。想要圖像具有互動的功能，可以使用JavaScript腳本，做出點擊等互動效果。
+ps:SVG以XML寫成
+---------------------------------------------------------------------------------------------------------------------------
+
+
+
+
