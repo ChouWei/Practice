@@ -1,0 +1,88 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Web.Http;
+
+using System.Web;
+using System.Diagnostics;
+using System.Threading.Tasks;
+using test01.Models;
+using System.IO;
+using System.Web.Mvc;
+using SouthChina.EService.Utility;
+
+
+namespace test01.Controllers
+{
+    [SerializableAttribute]
+    public class UploadController : ApiController
+    {
+
+        //public async Task<HttpResponseMessage> PostFormData()
+        //{
+        //    // Check if the request contains multipart/form-data.
+        //    if (!Request.Content.IsMimeMultipartContent())
+        //    {
+        //        throw new HttpResponseException(HttpStatusCode.UnsupportedMediaType);
+        //    }
+
+        //    string root = HttpContext.Current.Server.MapPath("~/App_Data");
+        //    var provider = new MultipartFormDataStreamProvider(root);
+
+        //    try
+        //    {
+
+        //        // Read the form data.
+        //        await Request.Content.ReadAsMultipartAsync(provider);
+
+        //        // This illustrates how to get the file names.
+        //        foreach (MultipartFileData file in provider.FileData)
+        //        {
+
+
+        //            Trace.WriteLine(file.Headers.ContentDisposition.FileName);
+        //            Trace.WriteLine("Server file path: " + file.LocalFileName);
+
+        //        }
+        //        return Request.CreateResponse(HttpStatusCode.OK);
+        //    }
+        //    catch (System.Exception e)
+        //    {
+        //        return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, e);
+        //    }
+        //}
+
+        //    // POST api/fileupload
+        public void  Post()
+        {
+            
+            if (HttpContext.Current.Request.Files.AllKeys.Any())
+            {
+                // Get the uploaded image from the Files collection
+                var httpPostedFile = HttpContext.Current.Request.Files["UploadImage"];
+
+                 if (httpPostedFile != null)
+                {
+                    // Get the complete file path 儲存到 test01\test01\Content
+                    String fileSavePath = HttpContext.Current.Server.MapPath("~/Content") /*+ HttpContext.Current.Request.Form["ImageName"].ToString()*/;
+                    var provider = new MultipartFormDataStreamProvider(fileSavePath);
+                    
+                    // Save the uploaded file to "UploadedFiles" folder
+       
+                    //開始對EXCEL檔案做存檔
+                    string savePath = HttpContext.Current.Server.MapPath("~/Content/");  //定義上傳後存檔路徑
+                    string filename = Path.GetFileName(httpPostedFile.FileName);       //檔案名稱
+                    string fileExtension = Path.GetExtension(httpPostedFile.FileName).ToLower(); //取得檔案格式
+                    string newfilename = filename.Remove(filename.LastIndexOf('.')) + "_" + DateTime.Now.ToString("yyyyMMddHHmmss") + fileExtension;
+                    string saveAS = savePath + newfilename; //儲存檔案的完整路徑與檔名:完整路徑+系統訂義的檔名+該上傳檔的副檔名
+                    Console.WriteLine("saveAS=" + saveAS+","+"file="+ httpPostedFile);
+                    httpPostedFile.SaveAs(saveAS);   //將上傳的檔案儲存               
+                    
+                }
+            }
+        }
+    }
+}
