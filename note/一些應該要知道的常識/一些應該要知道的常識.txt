@@ -2,11 +2,13 @@ http://coolshell.cn/articles/9666.html
 
 https://liujb.wordpress.com/2016/01/20/how-to-quick-getting-started-for-frontend/
 
-http://coderlmn.github.io/code-standards/#_pillars_of_front_end_development
+前端代碼規範:http://coderlmn.github.io/code-standards/#_pillars_of_front_end_development
 
 "程序員修煉之道︰從小工到專家 ":https://mitpress.mit.edu/sicp/full-text/book/book-Z-H-9.html
 
 CSS:https://blog.mozilla.org/webdev/2009/03/27/css-spriting-tips/
+
+google chrome : html5 outliner
 
 webkit:
 

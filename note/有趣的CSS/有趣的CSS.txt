@@ -1,0 +1,20 @@
+上下層圖片顏色不同   
+
+ border-color: #4d7bd6;
+ background-image: linear-gradient(to bottom,#89bb58,#4d7bd6);
+
+文字選取顏色不同
+	::selection {
+background: pink;
+color: #ffffff;
+}
+::-moz-selection {
+background: #b65132;
+color: #ffffff;
+}
+img::selection {
+background: transparent;
+}
+img::-moz-selection {
+background: transparent;
+}
